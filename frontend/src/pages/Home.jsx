@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
 import {
     Shield,
-    User,
+    BookUser,
     GraduationCap,
     ArrowRight,
     HandCoins,
@@ -44,7 +44,7 @@ const portails = [
         role: 'Enseignant',
         description: 'Consultation du planning, saisie des notes et suivi des séances validées.',
         path: PATHS.enseignant.dashboard,
-        icon: User,
+        icon: BookUser,
         bg: 'bg-emerald-600',
         hover: 'hover:border-emerald-400',
         badge: 'bg-emerald-100 text-emerald-700',

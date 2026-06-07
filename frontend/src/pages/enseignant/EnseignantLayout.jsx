@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
-import { LayoutDashboard, Calendar, ClipboardList, User, ArrowLeft } from 'lucide-react'
+import { LayoutDashboard, Calendar, ClipboardList, BookUser, User, ArrowLeft } from 'lucide-react'
 
 const navItems = [
     { to: PATHS.enseignant.dashboard, label: 'Dashboard', icon: LayoutDashboard },
@@ -22,7 +22,7 @@ export default function EnseignantLayout() {
 
                 <div className="flex items-center gap-3 px-6 py-5 border-b border-emerald-700">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500">
-                        <User className="h-4 w-4 text-white" />
+                        <BookUser className="h-4 w-4 text-white" />
                     </div>
                     <div>
                         <p className="text-sm font-semibold">Enseignant</p>
