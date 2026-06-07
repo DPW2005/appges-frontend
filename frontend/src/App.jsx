@@ -10,6 +10,12 @@ import GestionnaireProfil from './pages/gestionnaire/Profile'
 import ChefDeptProfil from './pages/chef-departement/Profile'
 import EnseignantProfil from './pages/enseignant/Profile'
 import EtudiantProfil from './pages/etudiant/Profile'
+import SuperAdminEtudiants from './pages/super-admin/Etudiants'
+import GestionnaireEtudiants from './pages/gestionnaire/Etudiants'
+import ChefDeptEtudiants from './pages/chef-departement/Etudiants'
+import SuperAdminEnseignants from './pages/super-admin/Enseignants'
+import GestionnaireEnseignants from './pages/gestionnaire/Enseignants'
+import ChefDeptEnseignants from './pages/chef-departement/Enseignants'
 
 // Layouts
 import SuperAdminLayout from './pages/super-admin/SuperAdminLayout'
@@ -39,6 +45,8 @@ function App() {
             <Route index element={<Navigate to={PATHS.superAdmin.dashboard} replace />} />
             <Route path="dashboard" element={<SuperAdminDashboard />} />
             <Route path="profil" element={<SuperAdminProfil />} />
+            <Route path="etudiants" element={<SuperAdminEtudiants />} />
+            <Route path="enseignants" element={<SuperAdminEnseignants />} />
           </Route>
 
           {/* Gestionnaire */}
@@ -46,6 +54,8 @@ function App() {
             <Route index element={<Navigate to={PATHS.gestionnaire.dashboard} replace />} />
             <Route path="dashboard" element={<GestionnaireDashboard />} />
             <Route path="profil" element={<GestionnaireProfil />} />
+            <Route path="etudiants" element={<GestionnaireEtudiants />} />
+            <Route path="enseignants" element={<GestionnaireEnseignants />} />
           </Route>
 
           {/* Chef de Département */}
@@ -53,6 +63,8 @@ function App() {
             <Route index element={<Navigate to={PATHS.chefDept.dashboard} replace />} />
             <Route path="dashboard" element={<ChefDeptDashboard />} />
             <Route path="profil" element={<ChefDeptProfil />} />
+            <Route path="etudiants" element={<ChefDeptEtudiants />} />
+            <Route path="enseignants" element={<ChefDeptEnseignants />} />
           </Route>
 
           {/* Enseignant */}
