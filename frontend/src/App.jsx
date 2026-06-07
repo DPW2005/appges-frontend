@@ -16,6 +16,12 @@ import ChefDeptEtudiants from './pages/chef-departement/Etudiants'
 import SuperAdminEnseignants from './pages/super-admin/Enseignants'
 import GestionnaireEnseignants from './pages/gestionnaire/Enseignants'
 import ChefDeptEnseignants from './pages/chef-departement/Enseignants'
+import SuperAdminCours from './pages/super-admin/Cours'
+import GestionnaireCours from './pages/gestionnaire/Cours'
+import ChefDeptCours from './pages/chef-departement/Cours'
+import ChefDeptNotes from './pages/chef-departement/Notes'
+import EnseignantNotes from './pages/enseignant/Notes'
+import EtudiantNotes from './pages/etudiant/Notes'
 
 // Layouts
 import SuperAdminLayout from './pages/super-admin/SuperAdminLayout'
@@ -47,6 +53,7 @@ function App() {
             <Route path="profil" element={<SuperAdminProfil />} />
             <Route path="etudiants" element={<SuperAdminEtudiants />} />
             <Route path="enseignants" element={<SuperAdminEnseignants />} />
+            <Route path="cours" element={<SuperAdminCours />} />
           </Route>
 
           {/* Gestionnaire */}
@@ -56,6 +63,7 @@ function App() {
             <Route path="profil" element={<GestionnaireProfil />} />
             <Route path="etudiants" element={<GestionnaireEtudiants />} />
             <Route path="enseignants" element={<GestionnaireEnseignants />} />
+            <Route path="cours" element={<GestionnaireCours />} />
           </Route>
 
           {/* Chef de Département */}
@@ -65,6 +73,8 @@ function App() {
             <Route path="profil" element={<ChefDeptProfil />} />
             <Route path="etudiants" element={<ChefDeptEtudiants />} />
             <Route path="enseignants" element={<ChefDeptEnseignants />} />
+            <Route path="cours" element={<ChefDeptCours />} />
+            <Route path="notes" element={<ChefDeptNotes />} />
           </Route>
 
           {/* Enseignant */}
@@ -72,6 +82,7 @@ function App() {
             <Route index element={<Navigate to={PATHS.enseignant.dashboard} replace />} />
             <Route path="dashboard" element={<EnseignantDashboard />} />
             <Route path="profil" element={<EnseignantProfil />} />
+            <Route path="notes" element={<EnseignantNotes />} />
           </Route>
 
           {/* Étudiant */}
@@ -79,6 +90,7 @@ function App() {
             <Route index element={<Navigate to={PATHS.etudiant.dashboard} replace />} />
             <Route path="dashboard" element={<EtudiantDashboard />} />
             <Route path="profil" element={<EtudiantProfil />} />
+            <Route path="notes" element={<EtudiantNotes />} />
           </Route>
 
           <Route path="*" element={<Navigate to={PATHS.home} replace />} />
