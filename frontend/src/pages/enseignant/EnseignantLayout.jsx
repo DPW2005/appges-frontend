@@ -4,8 +4,11 @@ import { LayoutDashboard, Calendar, ClipboardList, User, ArrowLeft } from 'lucid
 
 const navItems = [
     { to: PATHS.enseignant.dashboard, label: 'Dashboard', icon: LayoutDashboard },
+    { separator: true, label: 'Consultation' },
     { to: PATHS.enseignant.planning, label: 'Planning', icon: Calendar },
+    { separator: true, label: 'Saisie' },
     { to: PATHS.enseignant.notes, label: 'Notes', icon: ClipboardList },
+    { separator: true, label: 'Compte' },
     { to: PATHS.enseignant.profil, label: 'Mon profil', icon: User },
 ]
 
@@ -27,22 +30,32 @@ export default function EnseignantLayout() {
                     </div>
                 </div>
 
-                <nav className="flex-1 px-3 py-4 space-y-1">
-                    {navItems.map(({ to, label, icon: Icon }) => (
-                        <NavLink
-                            key={to}
-                            to={to}
-                            className={({ isActive }) =>
-                                `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${isActive
-                                    ? 'bg-emerald-500 text-white'
-                                    : 'text-emerald-200 hover:bg-emerald-800 hover:text-white'
-                                }`
-                            }
-                        >
-                            <Icon className="h-4 w-4" />
-                            {label}
-                        </NavLink>
-                    ))}
+                <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
+                    {navItems.map((item, i) => {
+                        if (item.separator) {
+                            return (
+                                <p key={i} className="px-3 pt-4 pb-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+                                    {item.label}
+                                </p>
+                            )
+                        }
+                        const Icon = item.icon
+                        return (
+                            <NavLink
+                                key={item.to}
+                                to={item.to}
+                                className={({ isActive }) =>
+                                    `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${isActive
+                                        ? 'bg-cyan-500 text-white'
+                                        : 'text-cyan-200 hover:bg-cyan-800 hover:text-white'
+                                    }`
+                                }
+                            >
+                                <Icon className="h-4 w-4" />
+                                {item.label}
+                            </NavLink>
+                        )
+                    })}
                 </nav>
 
                 <div className="px-3 pb-4">

@@ -4,8 +4,16 @@ export const PATHS = {
     superAdmin: {
         root: "/super-admin",
         dashboard: "/super-admin/dashboard",
-        comptes: "/super-admin/comptes",
+        superAdmin: "/super-admin/superAdmin",
+        gestionnaires: "/super-admin/gestionnaires",
         journaux: "/super-admin/journaux",
+        etudiants: "/super-admin/etudiants",
+        enseignants: "/super-admin/enseignants",
+        cours: "/super-admin/cours",
+        factures: "/super-admin/factures",
+        bulletins: "/super-admin/bulletins",
+        planning: "/super-admin/planning",
+        profil: "/super-admin/profil",
     },
 
     gestionnaire: {
@@ -17,6 +25,17 @@ export const PATHS = {
         factures: "/gestionnaire/factures",
         bulletins: "/gestionnaire/bulletins",
         planning: "/gestionnaire/planning",
+        profil: "/gestionnaire/profil",
+    },
+
+    chefDept: {
+        root: "/chef-departement",
+        dashboard: "/chef-departement/dashboard",
+        etudiants: "/chef-departement/etudiants",
+        enseignants: "/chef-departement/enseignants",
+        cours: "/chef-departement/cours",
+        notes: "/chef-departement/notes",
+        profil: "/chef-departement/profil",
     },
 
     enseignant: {
@@ -34,4 +53,4 @@ export const PATHS = {
         bulletin: "/etudiant/bulletin",
         profil: "/etudiant/profil",
     },
-};
+}

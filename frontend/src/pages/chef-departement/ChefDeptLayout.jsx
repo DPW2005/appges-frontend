@@ -1,31 +1,36 @@
 import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
-import { LayoutDashboard, ClipboardList, FileText, User, ArrowLeft, GraduationCap } from 'lucide-react'
+import {
+    LayoutDashboard, GraduationCap, Users,
+    BookOpen, ClipboardList, User, ArrowLeft, Briefcase
+} from 'lucide-react'
 
 const navItems = [
-    { to: PATHS.etudiant.dashboard, label: 'Dashboard', icon: LayoutDashboard },
+    { to: PATHS.chefDept.dashboard, label: 'Dashboard', icon: LayoutDashboard },
     { separator: true, label: 'Consultation' },
-    { to: PATHS.etudiant.notes, label: 'Mes notes', icon: ClipboardList },
-    { to: PATHS.etudiant.bulletin, label: 'Bulletin', icon: FileText },
+    { to: PATHS.chefDept.etudiants, label: 'Étudiants', icon: GraduationCap },
+    { to: PATHS.chefDept.enseignants, label: 'Enseignants', icon: Users },
+    { to: PATHS.chefDept.cours, label: 'UE / Cours', icon: BookOpen },
+    { separator: true, label: 'Saisie' },
+    { to: PATHS.chefDept.notes, label: 'Notes filière', icon: ClipboardList },
     { separator: true, label: 'Compte' },
-    { to: PATHS.etudiant.profil, label: 'Mon profil', icon: User },
+    { to: PATHS.chefDept.profil, label: 'Mon profil', icon: User },
 ]
 
-export default function EtudiantLayout() {
+export default function ChefDeptLayout() {
     const navigate = useNavigate()
 
     return (
         <div className="flex h-screen bg-slate-100">
+            <aside className="w-64 bg-cyan-900 text-white flex flex-col">
 
-            <aside className="w-64 bg-amber-900 text-white flex flex-col">
-
-                <div className="flex items-center gap-3 px-6 py-5 border-b border-amber-700">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500">
-                        <GraduationCap className="h-4 w-4 text-white" />
+                <div className="flex items-center gap-3 px-6 py-5 border-b border-cyan-700">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-500">
+                        <Briefcase className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                        <p className="text-sm font-semibold">Étudiant</p>
-                        <p className="text-xs text-amber-300">APPGES</p>
+                        <p className="text-sm font-semibold">Chef de Département</p>
+                        <p className="text-xs text-cyan-300">APPGES</p>
                     </div>
                 </div>
 
@@ -57,10 +62,10 @@ export default function EtudiantLayout() {
                     })}
                 </nav>
 
-                <div className="px-3 pb-4">
+                <div className="px-3 pb-4 border-t border-cyan-700 pt-3">
                     <button
                         onClick={() => navigate(PATHS.home)}
-                        className="flex w-full items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-amber-200 hover:bg-amber-800 hover:text-white transition-all"
+                        className="flex w-full items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-cyan-200 hover:bg-cyan-800 hover:text-white transition-all"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         Accueil
@@ -72,7 +77,6 @@ export default function EtudiantLayout() {
             <main className="flex-1 overflow-y-auto">
                 <Outlet />
             </main>
-
         </div>
     )
 }

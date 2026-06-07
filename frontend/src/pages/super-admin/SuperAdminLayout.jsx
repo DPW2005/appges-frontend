@@ -1,11 +1,22 @@
 import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
-import { LayoutDashboard, Users, ScrollText, ArrowLeft, Shield } from 'lucide-react'
+import { LayoutDashboard, Users, GraduationCap, BookOpen, Receipt, FileText, Calendar, User, BookCheck, ScrollText, ArrowLeft, Shield, HandCoins } from 'lucide-react'
 
 const navItems = [
     { to: PATHS.superAdmin.dashboard, label: 'Dashboard', icon: LayoutDashboard },
-    { to: PATHS.superAdmin.comptes, label: 'Comptes', icon: Users },
+    { separator: true, label: 'Consultation' },
+    { to: PATHS.superAdmin.superAdmin, label: 'Super Admin', icon: Shield },
+    { to: PATHS.superAdmin.gestionnaires, label: 'Gestionnaires', icon: HandCoins },
+    { separator: true, label: 'Gestion' },
     { to: PATHS.superAdmin.journaux, label: 'Journaux', icon: ScrollText },
+    { to: PATHS.superAdmin.etudiants, label: 'Étudiants', icon: GraduationCap },
+    { to: PATHS.superAdmin.enseignants, label: 'Enseignants', icon: BookCheck },
+    { to: PATHS.superAdmin.cours, label: 'Cours / UE', icon: BookOpen },
+    { to: PATHS.superAdmin.factures, label: 'Factures', icon: Receipt },
+    { to: PATHS.superAdmin.bulletins, label: 'Bulletins', icon: FileText },
+    { to: PATHS.superAdmin.planning, label: 'Planning', icon: Calendar },
+    { separator: true, label: 'Compte' },
+    { to: PATHS.superAdmin.profil, label: 'Mon profil', icon: User },
 ]
 
 export default function SuperAdminLayout() {
@@ -29,22 +40,32 @@ export default function SuperAdminLayout() {
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex-1 px-3 py-4 space-y-1">
-                    {navItems.map(({ to, label, icon: Icon }) => (
-                        <NavLink
-                            key={to}
-                            to={to}
-                            className={({ isActive }) =>
-                                `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${isActive
-                                    ? 'bg-violet-600 text-white'
-                                    : 'text-slate-400 hover:bg-slate-800 hover:text-white'
-                                }`
-                            }
-                        >
-                            <Icon className="h-4 w-4" />
-                            {label}
-                        </NavLink>
-                    ))}
+                <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
+                    {navItems.map((item, i) => {
+                        if (item.separator) {
+                            return (
+                                <p key={i} className="px-3 pt-4 pb-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+                                    {item.label}
+                                </p>
+                            )
+                        }
+                        const Icon = item.icon
+                        return (
+                            <NavLink
+                                key={item.to}
+                                to={item.to}
+                                className={({ isActive }) =>
+                                    `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${isActive
+                                        ? 'bg-cyan-500 text-white'
+                                        : 'text-cyan-200 hover:bg-cyan-800 hover:text-white'
+                                    }`
+                                }
+                            >
+                                <Icon className="h-4 w-4" />
+                                {item.label}
+                            </NavLink>
+                        )
+                    })}
                 </nav>
 
                 {/* Retour accueil */}

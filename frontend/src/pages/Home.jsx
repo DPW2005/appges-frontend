@@ -2,10 +2,11 @@ import { useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
 import {
     Shield,
-    Settings,
     User,
     GraduationCap,
-    ArrowRight
+    ArrowRight,
+    HandCoins,
+    Briefcase
 } from 'lucide-react'
 
 const portails = [
@@ -23,11 +24,21 @@ const portails = [
         role: 'Gestionnaire / Scolarité',
         description: 'Gestion des étudiants, enseignants, cours, factures, bulletins et plannings.',
         path: PATHS.gestionnaire.dashboard,
-        icon: Settings,
+        icon: HandCoins,
         bg: 'bg-blue-600',
         hover: 'hover:border-blue-400',
         badge: 'bg-blue-100 text-blue-700',
         arrow: 'group-hover:bg-blue-600',
+    },
+    {
+        role: 'Chef de Département',
+        description: 'Consultation de la filière, des UE et des enseignants. Saisie des notes de sa filière.',
+        path: PATHS.chefDept.dashboard,
+        icon: Briefcase,
+        bg: 'bg-cyan-600',
+        hover: 'hover:border-cyan-400 hover:shadow-cyan-100',
+        badge: 'bg-cyan-100 text-cyan-700',
+        arrow: 'group-hover:bg-cyan-600',
     },
     {
         role: 'Enseignant',
