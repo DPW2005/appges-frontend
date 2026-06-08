@@ -29,6 +29,10 @@ import SuperAdminFactures from './pages/super-admin/Factures'
 import GestionnaireFactures from './pages/gestionnaire/Factures'
 import SuperAdminBulletins from './pages/super-admin/Bulletins'
 import GestionnaireBulletins from './pages/gestionnaire/Bulletins'
+import SuperAdminFilieres from './pages/super-admin/Filieres'
+import GestionnaireFilieres from './pages/gestionnaire/Filieres'
+import SuperAdminJournaux from './pages/super-admin/Journaux'
+import SuperAdminUtilisateurs from './pages/super-admin/Utilisateurs'
 
 // Layouts
 import SuperAdminLayout from './pages/super-admin/SuperAdminLayout'
@@ -63,6 +67,9 @@ function App() {
             <Route path="cours" element={<SuperAdminCours />} />
             <Route path="factures" element={<SuperAdminFactures />} />
             <Route path="bulletins" element={<SuperAdminBulletins />} />
+            <Route path="filieres" element={<SuperAdminFilieres />} />
+            <Route path="journaux" element={<SuperAdminJournaux />} />
+            <Route path="utilisateurs" element={<SuperAdminUtilisateurs />} />
           </Route>
 
           {/* Gestionnaire */}
@@ -75,7 +82,8 @@ function App() {
             <Route path="cours" element={<GestionnaireCours />} />
             <Route path="planning" element={<GestionnairePlanning />} />
             <Route path="factures" element={<GestionnaireFactures />} />
-            <Route path="bulletins" element={<SuperAdminBulletins />} />
+            <Route path="bulletins" element={<GestionnaireBulletins />} />
+            <Route path="filieres" element={<GestionnaireFilieres />} />
           </Route>
 
           {/* Chef de Département */}

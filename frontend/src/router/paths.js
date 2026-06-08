@@ -4,10 +4,9 @@ export const PATHS = {
     superAdmin: {
         root: "/super-admin",
         dashboard: "/super-admin/dashboard",
-        superAdmin: "/super-admin/superAdmin",
-        gestionnaires: "/super-admin/gestionnaires",
+        utilisateurs: "/super-admin/utilisateurs",
         journaux: "/super-admin/journaux",
-        filiere: "/super-admin/filiere",
+        filieres: "/super-admin/filieres",
         etudiants: "/super-admin/etudiants",
         enseignants: "/super-admin/enseignants",
         cours: "/super-admin/cours",
@@ -19,7 +18,7 @@ export const PATHS = {
     gestionnaire: {
         root: "/gestionnaire",
         dashboard: "/gestionnaire/dashboard",
-        filiere: "/gestionnaire/filiere",
+        filieres: "/gestionnaire/filieres",
         etudiants: "/gestionnaire/etudiants",
         enseignants: "/gestionnaire/enseignants",
         cours: "/gestionnaire/cours",

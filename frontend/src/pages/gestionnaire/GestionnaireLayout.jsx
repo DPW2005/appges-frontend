@@ -12,7 +12,7 @@ const navItems = [
     { to: PATHS.gestionnaire.enseignants, label: 'Enseignants', icon: Users },
     { to: PATHS.gestionnaire.planning, label: 'Planning', icon: Calendar },
     { separator: true, label: 'Consultation' },
-    { to: PATHS.gestionnaire.filiere, label: 'Filière', icon: TreePine },
+    { to: PATHS.gestionnaire.filieres, label: 'Filières', icon: TreePine },
     { to: PATHS.gestionnaire.factures, label: 'Factures', icon: Receipt },
     { to: PATHS.gestionnaire.bulletins, label: 'Bulletins', icon: FileText },
     { to: PATHS.gestionnaire.cours, label: 'Cours / UE', icon: BookOpen },
