@@ -2,7 +2,8 @@ import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
 import {
     LayoutDashboard, GraduationCap, Users,
-    BookOpen, ClipboardList, User, ArrowLeft, Briefcase
+    BookOpen, ClipboardList, User, ArrowLeft, Briefcase,
+    Calendar
 } from 'lucide-react'
 
 const navItems = [
@@ -11,6 +12,7 @@ const navItems = [
     { to: PATHS.chefDept.etudiants, label: 'Étudiants', icon: GraduationCap },
     { to: PATHS.chefDept.enseignants, label: 'Enseignants', icon: Users },
     { to: PATHS.chefDept.cours, label: 'UE / Cours', icon: BookOpen },
+    { to: PATHS.chefDept.planning, label: 'Planning', icon: Calendar },
     { separator: true, label: 'Saisie' },
     { to: PATHS.chefDept.notes, label: 'Notes filière', icon: ClipboardList },
     { separator: true, label: 'Compte' },

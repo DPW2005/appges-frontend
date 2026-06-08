@@ -22,6 +22,13 @@ import ChefDeptCours from './pages/chef-departement/Cours'
 import ChefDeptNotes from './pages/chef-departement/Notes'
 import EnseignantNotes from './pages/enseignant/Notes'
 import EtudiantNotes from './pages/etudiant/Notes'
+import GestionnairePlanning from './pages/gestionnaire/Planning'
+import ChefDeptPlanning from './pages/chef-departement/Planning'
+import EnseignantPlanning from './pages/enseignant/Planning'
+import SuperAdminFactures from './pages/super-admin/Factures'
+import GestionnaireFactures from './pages/gestionnaire/Factures'
+import SuperAdminBulletins from './pages/super-admin/Bulletins'
+import GestionnaireBulletins from './pages/gestionnaire/Bulletins'
 
 // Layouts
 import SuperAdminLayout from './pages/super-admin/SuperAdminLayout'
@@ -54,6 +61,8 @@ function App() {
             <Route path="etudiants" element={<SuperAdminEtudiants />} />
             <Route path="enseignants" element={<SuperAdminEnseignants />} />
             <Route path="cours" element={<SuperAdminCours />} />
+            <Route path="factures" element={<SuperAdminFactures />} />
+            <Route path="bulletins" element={<SuperAdminBulletins />} />
           </Route>
 
           {/* Gestionnaire */}
@@ -64,6 +73,9 @@ function App() {
             <Route path="etudiants" element={<GestionnaireEtudiants />} />
             <Route path="enseignants" element={<GestionnaireEnseignants />} />
             <Route path="cours" element={<GestionnaireCours />} />
+            <Route path="planning" element={<GestionnairePlanning />} />
+            <Route path="factures" element={<GestionnaireFactures />} />
+            <Route path="bulletins" element={<SuperAdminBulletins />} />
           </Route>
 
           {/* Chef de Département */}
@@ -75,6 +87,7 @@ function App() {
             <Route path="enseignants" element={<ChefDeptEnseignants />} />
             <Route path="cours" element={<ChefDeptCours />} />
             <Route path="notes" element={<ChefDeptNotes />} />
+            <Route path="planning" element={<ChefDeptPlanning />} />
           </Route>
 
           {/* Enseignant */}
@@ -83,6 +96,7 @@ function App() {
             <Route path="dashboard" element={<EnseignantDashboard />} />
             <Route path="profil" element={<EnseignantProfil />} />
             <Route path="notes" element={<EnseignantNotes />} />
+            <Route path="planning" element={<EnseignantPlanning />} />
           </Route>
 
           {/* Étudiant */}

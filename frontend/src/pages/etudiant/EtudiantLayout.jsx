@@ -1,12 +1,11 @@
 import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
-import { LayoutDashboard, ClipboardList, FileText, User, ArrowLeft, GraduationCap } from 'lucide-react'
+import { LayoutDashboard, ClipboardList, FileText, User, ArrowLeft, GraduationCap, Calendar } from 'lucide-react'
 
 const navItems = [
     { to: PATHS.etudiant.dashboard, label: 'Dashboard', icon: LayoutDashboard },
     { separator: true, label: 'Consultation' },
     { to: PATHS.etudiant.notes, label: 'Mes notes', icon: ClipboardList },
-    { to: PATHS.etudiant.bulletin, label: 'Bulletin', icon: FileText },
     { separator: true, label: 'Compte' },
     { to: PATHS.etudiant.profil, label: 'Mon profil', icon: User },
 ]

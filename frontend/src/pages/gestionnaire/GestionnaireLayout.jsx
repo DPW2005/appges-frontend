@@ -2,7 +2,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
 import {
     LayoutDashboard, Users, User, GraduationCap, BookOpen,
-    Receipt, FileText, Calendar, ArrowLeft, HandCoins
+    Receipt, FileText, Calendar, ArrowLeft, HandCoins, TreePine
 } from 'lucide-react'
 
 const navItems = [
@@ -10,10 +10,12 @@ const navItems = [
     { separator: true, label: 'Gestion' },
     { to: PATHS.gestionnaire.etudiants, label: 'Étudiants', icon: GraduationCap },
     { to: PATHS.gestionnaire.enseignants, label: 'Enseignants', icon: Users },
-    { to: PATHS.gestionnaire.cours, label: 'Cours / UE', icon: BookOpen },
+    { to: PATHS.gestionnaire.planning, label: 'Planning', icon: Calendar },
+    { separator: true, label: 'Consultation' },
+    { to: PATHS.gestionnaire.filiere, label: 'Filière', icon: TreePine },
     { to: PATHS.gestionnaire.factures, label: 'Factures', icon: Receipt },
     { to: PATHS.gestionnaire.bulletins, label: 'Bulletins', icon: FileText },
-    { to: PATHS.gestionnaire.planning, label: 'Planning', icon: Calendar },
+    { to: PATHS.gestionnaire.cours, label: 'Cours / UE', icon: BookOpen },
     { separator: true, label: 'Compte' },
     { to: PATHS.gestionnaire.profil, label: 'Mon profil', icon: User },
 

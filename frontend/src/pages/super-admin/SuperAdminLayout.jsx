@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from 'react-router'
 import { PATHS } from '@/router/paths'
-import { LayoutDashboard, Users, GraduationCap, BookOpen, Receipt, FileText, Calendar, User, BookCheck, ScrollText, ArrowLeft, Shield, HandCoins } from 'lucide-react'
+import { LayoutDashboard, Users, GraduationCap, BookOpen, Receipt, FileText, User, BookCheck, ScrollText, ArrowLeft, Shield, HandCoins, TreePine } from 'lucide-react'
 
 const navItems = [
     { to: PATHS.superAdmin.dashboard, label: 'Dashboard', icon: LayoutDashboard },
@@ -9,12 +9,12 @@ const navItems = [
     { to: PATHS.superAdmin.gestionnaires, label: 'Gestionnaires', icon: HandCoins },
     { separator: true, label: 'Gestion' },
     { to: PATHS.superAdmin.journaux, label: 'Journaux', icon: ScrollText },
+    { to: PATHS.superAdmin.filiere, label: 'Filière', icon: TreePine },
     { to: PATHS.superAdmin.etudiants, label: 'Étudiants', icon: GraduationCap },
     { to: PATHS.superAdmin.enseignants, label: 'Enseignants', icon: BookCheck },
     { to: PATHS.superAdmin.cours, label: 'Cours / UE', icon: BookOpen },
     { to: PATHS.superAdmin.factures, label: 'Factures', icon: Receipt },
     { to: PATHS.superAdmin.bulletins, label: 'Bulletins', icon: FileText },
-    { to: PATHS.superAdmin.planning, label: 'Planning', icon: Calendar },
     { separator: true, label: 'Compte' },
     { to: PATHS.superAdmin.profil, label: 'Mon profil', icon: User },
 ]

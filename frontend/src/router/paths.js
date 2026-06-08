@@ -7,18 +7,19 @@ export const PATHS = {
         superAdmin: "/super-admin/superAdmin",
         gestionnaires: "/super-admin/gestionnaires",
         journaux: "/super-admin/journaux",
+        filiere: "/super-admin/filiere",
         etudiants: "/super-admin/etudiants",
         enseignants: "/super-admin/enseignants",
         cours: "/super-admin/cours",
         factures: "/super-admin/factures",
         bulletins: "/super-admin/bulletins",
-        planning: "/super-admin/planning",
         profil: "/super-admin/profil",
     },
 
     gestionnaire: {
         root: "/gestionnaire",
         dashboard: "/gestionnaire/dashboard",
+        filiere: "/gestionnaire/filiere",
         etudiants: "/gestionnaire/etudiants",
         enseignants: "/gestionnaire/enseignants",
         cours: "/gestionnaire/cours",
@@ -36,6 +37,7 @@ export const PATHS = {
         cours: "/chef-departement/cours",
         notes: "/chef-departement/notes",
         profil: "/chef-departement/profil",
+        planning: "/chef-departement/planning",
     },
 
     enseignant: {
@@ -50,7 +52,6 @@ export const PATHS = {
         root: "/etudiant",
         dashboard: "/etudiant/dashboard",
         notes: "/etudiant/notes",
-        bulletin: "/etudiant/bulletin",
         profil: "/etudiant/profil",
     },
 }
